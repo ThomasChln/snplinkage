@@ -1,0 +1,38 @@
+Package: snplinkage
+Title: Single Nucleotide Polymorphisms Linkage Disequilibrium Visualizations
+Version: 1.0.0
+Authors@R: c(
+  person("Thomas", "Charlon", role = c("aut", "cre"), email = "charlon@protonmail.com", comment = c(ORCID = "0000-0001-7497-0470")),
+  person("Karl", "Forner", role = "aut"),
+  person("Alessandro", "Di Cara", role = "aut"),
+  person("Jérôme", "Wojcik", role = "aut"))
+Description: Linkage disequilibrium visualizations of up to several hundreds of single nucleotide polymorphisms (SNPs), annotated with chromosomic positions and gene names. Two types of plots are available for small numbers of SNPs (<40) and for large numbers (tested up to 500). Both can be extended by combining other ggplots, e.g. association studies results, and functions enable to directly visualize the effect of SNP selection methods, as minor allele frequency filtering and TagSNP selection, with a second correlation heatmap. The SNPs correlations are computed on Genotype Data objects from the 'GWASTools' package using the 'SNPRelate' package, and the plots are customizable 'ggplot2' and 'gtable' objects and are annotated using the 'biomaRt' package. Usage is detailed in the vignette with example data and results from up to 500 SNPs of 1,200 scans are in Charlon T. (2019) <doi:10.13097/archive-ouverte/unige:161795>.
+Imports:
+    gdsfmt,
+    ggplot2,
+    gtable,
+    magrittr,
+    stats,
+    utils
+Depends:
+    R (>= 2.15),
+    GWASTools (>= 1.10.1)
+Suggests:
+    biomaRt,
+    cowplot,
+    data.table,
+    dplyr,
+    ggrepel,
+    grid,
+    grDevices,
+    knitr,
+    methods,
+    plyr,
+    SNPRelate,
+    testthat
+biocViews: GeneticVariability, MicroArray, SNP
+URL: https://gitlab.com/thomaschln/snplinkage
+VignetteBuilder: knitr
+License: GPL-3 | file LICENSE
+Encoding: UTF-8
+RoxygenNote: 7.2.3

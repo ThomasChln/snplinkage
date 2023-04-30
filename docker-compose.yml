@@ -1,0 +1,33 @@
+version: '2'
+
+services:
+  manual:
+    build: ./
+    volumes:
+      - ./:/snplinkage/
+    working_dir: /snplinkage
+    command: make doc.pdf
+  vignette:
+    build: ./
+    volumes:
+      - ./:/snplinkage/
+    working_dir: /snplinkage
+    command: make vignette
+  build_doc:
+    build: ./
+    volumes:
+      - ./:/snplinkage/
+    working_dir: /snplinkage/
+    command: make roxygenise
+  pkg_test:
+    build: ./
+    volumes:
+      - ./:/snplinkage/
+    working_dir: /snplinkage/
+    command: make devtools_test
+  pkg_check:
+    build: ./
+    volumes:
+      - ./:/snplinkage/
+    working_dir: /snplinkage/
+    command: make

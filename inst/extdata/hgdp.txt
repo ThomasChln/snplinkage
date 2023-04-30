@@ -1,0 +1,320 @@
+hgdp_id	Gender	population	Geographic origin	Region
+HGDP00511	M	French	France	Europe
+HGDP00512	M	French	France	Europe
+HGDP00513	F	French	France	Europe
+HGDP00514	F	French	France	Europe
+HGDP00515	M	French	France	Europe
+HGDP00516	F	French	France	Europe
+HGDP00517	F	French	France	Europe
+HGDP00518	M	French	France	Europe
+HGDP00519	M	French	France	Europe
+HGDP00520	F	French	France	Europe
+HGDP00521	M	French	France	Europe
+HGDP00522	M	French	France	Europe
+HGDP00523	F	French	France	Europe
+HGDP00524	F	French	France	Europe
+HGDP00525	M	French	France	Europe
+HGDP00526	F	French	France	Europe
+HGDP00527	F	French	France	Europe
+HGDP00528	M	French	France	Europe
+HGDP00529	F	French	France	Europe
+HGDP00530	M	French	France	Europe
+HGDP00531	F	French	France	Europe
+HGDP00533	M	French	France	Europe
+HGDP00534	F	French	France	Europe
+HGDP00535	F	French	France	Europe
+HGDP00536	F	French	France	Europe
+HGDP00537	F	French	France	Europe
+HGDP00538	M	French	France	Europe
+HGDP00539	F	French	France	Europe
+HGDP00557	F	Druze	Israel (Carmel)	Middle Est
+HGDP00558	F	Druze	Israel (Carmel)	Middle Est
+HGDP00559	F	Druze	Israel (Carmel)	Middle Est
+HGDP00560	F	Druze	Israel (Carmel)	Middle Est
+HGDP00561	F	Druze	Israel (Carmel)	Middle Est
+HGDP00562	M	Druze	Israel (Carmel)	Middle Est
+HGDP00563	F	Druze	Israel (Carmel)	Middle Est
+HGDP00564	F	Druze	Israel (Carmel)	Middle Est
+HGDP00565	F	Druze	Israel (Carmel)	Middle Est
+HGDP00566	F	Druze	Israel (Carmel)	Middle Est
+HGDP00567	F	Druze	Israel (Carmel)	Middle Est
+HGDP00568	F	Druze	Israel (Carmel)	Middle Est
+HGDP00569	F	Druze	Israel (Carmel)	Middle Est
+HGDP00571	F	Druze	Israel (Carmel)	Middle Est
+HGDP00572	F	Druze	Israel (Carmel)	Middle Est
+HGDP00573	F	Druze	Israel (Carmel)	Middle Est
+HGDP00574	F	Druze	Israel (Carmel)	Middle Est
+HGDP00575	F	Druze	Israel (Carmel)	Middle Est
+HGDP00576	M	Druze	Israel (Carmel)	Middle Est
+HGDP00577	F	Druze	Israel (Carmel)	Middle Est
+HGDP00578	F	Druze	Israel (Carmel)	Middle Est
+HGDP00579	F	Druze	Israel (Carmel)	Middle Est
+HGDP00580	M	Druze	Israel (Carmel)	Middle Est
+HGDP00581	F	Druze	Israel (Carmel)	Middle Est
+HGDP00582	F	Druze	Israel (Carmel)	Middle Est
+HGDP00583	F	Druze	Israel (Carmel)	Middle Est
+HGDP00584	F	Druze	Israel (Carmel)	Middle Est
+HGDP00586	F	Druze	Israel (Carmel)	Middle Est
+HGDP00587	F	Druze	Israel (Carmel)	Middle Est
+HGDP00588	M	Druze	Israel (Carmel)	Middle Est
+HGDP00590	F	Druze	Israel (Carmel)	Middle Est
+HGDP00591	F	Druze	Israel (Carmel)	Middle Est
+HGDP00594	M	Druze	Israel (Carmel)	Middle Est
+HGDP00595	M	Druze	Israel (Carmel)	Middle Est
+HGDP00597	M	Druze	Israel (Carmel)	Middle Est
+HGDP00598	M	Druze	Israel (Carmel)	Middle Est
+HGDP00599	M	Druze	Israel (Carmel)	Middle Est
+HGDP00600	M	Druze	Israel (Carmel)	Middle Est
+HGDP00601	F	Druze	Israel (Carmel)	Middle Est
+HGDP00602	M	Druze	Israel (Carmel)	Middle Est
+HGDP00604	M	Druze	Israel (Carmel)	Middle Est
+HGDP00606	F	Druze	Israel (Carmel)	Middle Est
+HGDP00607	F	Bedouin	Israel (Negev)	Middle Est
+HGDP00608	M	Bedouin	Israel (Negev)	Middle Est
+HGDP00609	M	Bedouin	Israel (Negev)	Middle Est
+HGDP00610	M	Bedouin	Israel (Negev)	Middle Est
+HGDP00611	M	Bedouin	Israel (Negev)	Middle Est
+HGDP00612	F	Bedouin	Israel (Negev)	Middle Est
+HGDP00613	F	Bedouin	Israel (Negev)	Middle Est
+HGDP00614	F	Bedouin	Israel (Negev)	Middle Est
+HGDP00615	F	Bedouin	Israel (Negev)	Middle Est
+HGDP00616	M	Bedouin	Israel (Negev)	Middle Est
+HGDP00618	M	Bedouin	Israel (Negev)	Middle Est
+HGDP00619	M	Bedouin	Israel (Negev)	Middle Est
+HGDP00620	M	Bedouin	Israel (Negev)	Middle Est
+HGDP00622	M	Bedouin	Israel (Negev)	Middle Est
+HGDP00623	M	Bedouin	Israel (Negev)	Middle Est
+HGDP00624	M	Bedouin	Israel (Negev)	Middle Est
+HGDP00625	M	Bedouin	Israel (Negev)	Middle Est
+HGDP00626	M	Bedouin	Israel (Negev)	Middle Est
+HGDP00627	M	Bedouin	Israel (Negev)	Middle Est
+HGDP00628	M	Bedouin	Israel (Negev)	Middle Est
+HGDP00629	M	Bedouin	Israel (Negev)	Middle Est
+HGDP00630	M	Bedouin	Israel (Negev)	Middle Est
+HGDP00631	M	Bedouin	Israel (Negev)	Middle Est
+HGDP00632	F	Bedouin	Israel (Negev)	Middle Est
+HGDP00634	F	Bedouin	Israel (Negev)	Middle Est
+HGDP00635	F	Bedouin	Israel (Negev)	Middle Est
+HGDP00636	F	Bedouin	Israel (Negev)	Middle Est
+HGDP00637	F	Bedouin	Israel (Negev)	Middle Est
+HGDP00638	F	Bedouin	Israel (Negev)	Middle Est
+HGDP00639	M	Bedouin	Israel (Negev)	Middle Est
+HGDP00640	M	Bedouin	Israel (Negev)	Middle Est
+HGDP00641	M	Bedouin	Israel (Negev)	Middle Est
+HGDP00642	M	Bedouin	Israel (Negev)	Middle Est
+HGDP00643	F	Bedouin	Israel (Negev)	Middle Est
+HGDP00644	M	Bedouin	Israel (Negev)	Middle Est
+HGDP00645	M	Bedouin	Israel (Negev)	Middle Est
+HGDP00646	F	Bedouin	Israel (Negev)	Middle Est
+HGDP00647	F	Bedouin	Israel (Negev)	Middle Est
+HGDP00648	M	Bedouin	Israel (Negev)	Middle Est
+HGDP00649	F	Bedouin	Israel (Negev)	Middle Est
+HGDP00650	F	Bedouin	Israel (Negev)	Middle Est
+HGDP00651	F	Bedouin	Israel (Negev)	Middle Est
+HGDP00653	F	Bedouin	Israel (Negev)	Middle Est
+HGDP00654	M	Bedouin	Israel (Negev)	Middle Est
+HGDP00665	M	Sardinian	Italy	Europe
+HGDP00666	M	Sardinian	Italy	Europe
+HGDP00667	F	Sardinian	Italy	Europe
+HGDP00668	M	Sardinian	Italy	Europe
+HGDP00669	F	Sardinian	Italy	Europe
+HGDP00670	M	Sardinian	Italy	Europe
+HGDP00671	M	Sardinian	Italy	Europe
+HGDP00672	F	Sardinian	Italy	Europe
+HGDP00673	F	Sardinian	Italy	Europe
+HGDP00674	M	Sardinian	Italy	Europe
+HGDP00675	M	Palestinian	Israel (Central)	Middle Est
+HGDP00676	M	Palestinian	Israel (Central)	Middle Est
+HGDP00677	M	Palestinian	Israel (Central)	Middle Est
+HGDP00678	M	Palestinian	Israel (Central)	Middle Est
+HGDP00679	F	Palestinian	Israel (Central)	Middle Est
+HGDP00680	F	Palestinian	Israel (Central)	Middle Est
+HGDP00682	F	Palestinian	Israel (Central)	Middle Est
+HGDP00683	F	Palestinian	Israel (Central)	Middle Est
+HGDP00684	F	Palestinian	Israel (Central)	Middle Est
+HGDP00685	F	Palestinian	Israel (Central)	Middle Est
+HGDP00686	F	Palestinian	Israel (Central)	Middle Est
+HGDP00687	F	Palestinian	Israel (Central)	Middle Est
+HGDP00688	F	Palestinian	Israel (Central)	Middle Est
+HGDP00689	F	Palestinian	Israel (Central)	Middle Est
+HGDP00690	F	Palestinian	Israel (Central)	Middle Est
+HGDP00691	F	Palestinian	Israel (Central)	Middle Est
+HGDP00692	F	Palestinian	Israel (Central)	Middle Est
+HGDP00693	F	Palestinian	Israel (Central)	Middle Est
+HGDP00694	F	Palestinian	Israel (Central)	Middle Est
+HGDP00696	F	Palestinian	Israel (Central)	Middle Est
+HGDP00697	F	Palestinian	Israel (Central)	Middle Est
+HGDP00698	F	Palestinian	Israel (Central)	Middle Est
+HGDP00699	F	Palestinian	Israel (Central)	Middle Est
+HGDP00700	F	Palestinian	Israel (Central)	Middle Est
+HGDP00701	F	Bedouin	Israel (Negev)	Middle Est
+HGDP00722	M	Palestinian	Israel (Central)	Middle Est
+HGDP00723	M	Palestinian	Israel (Central)	Middle Est
+HGDP00724	M	Palestinian	Israel (Central)	Middle Est
+HGDP00725	M	Palestinian	Israel (Central)	Middle Est
+HGDP00726	M	Palestinian	Israel (Central)	Middle Est
+HGDP00727	M	Palestinian	Israel (Central)	Middle Est
+HGDP00729	M	Palestinian	Israel (Central)	Middle Est
+HGDP00730	M	Palestinian	Israel (Central)	Middle Est
+HGDP00731	M	Palestinian	Israel (Central)	Middle Est
+HGDP00732	M	Palestinian	Israel (Central)	Middle Est
+HGDP00733	M	Palestinian	Israel (Central)	Middle Est
+HGDP00734	M	Palestinian	Israel (Central)	Middle Est
+HGDP00735	F	Palestinian	Israel (Central)	Middle Est
+HGDP00736	F	Palestinian	Israel (Central)	Middle Est
+HGDP00737	F	Palestinian	Israel (Central)	Middle Est
+HGDP00738	F	Palestinian	Israel (Central)	Middle Est
+HGDP00739	F	Palestinian	Israel (Central)	Middle Est
+HGDP00740	F	Palestinian	Israel (Central)	Middle Est
+HGDP00741	F	Palestinian	Israel (Central)	Middle Est
+HGDP00744	F	Palestinian	Israel (Central)	Middle Est
+HGDP00745	F	Palestinian	Israel (Central)	Middle Est
+HGDP00746	F	Palestinian	Israel (Central)	Middle Est
+HGDP00794	F	Orcadian	Orkney Islands	Europe
+HGDP00795	M	Orcadian	Orkney Islands	Europe
+HGDP00796	F	Orcadian	Orkney Islands	Europe
+HGDP00797	F	Orcadian	Orkney Islands	Europe
+HGDP00798	M	Orcadian	Orkney Islands	Europe
+HGDP00799	F	Orcadian	Orkney Islands	Europe
+HGDP00800	F	Orcadian	Orkney Islands	Europe
+HGDP00802	F	Orcadian	Orkney Islands	Europe
+HGDP00803	M	Orcadian	Orkney Islands	Europe
+HGDP00804	M	Orcadian	Orkney Islands	Europe
+HGDP00805	F	Orcadian	Orkney Islands	Europe
+HGDP00806	F	Orcadian	Orkney Islands	Europe
+HGDP00807	M	Orcadian	Orkney Islands	Europe
+HGDP00808	M	Orcadian	Orkney Islands	Europe
+HGDP00810	M	Orcadian	Orkney Islands	Europe
+HGDP00879	M	Russian	Russia	Europe
+HGDP00880	M	Russian	Russia	Europe
+HGDP00881	F	Russian	Russia	Europe
+HGDP00882	M	Russian	Russia	Europe
+HGDP00883	M	Russian	Russia	Europe
+HGDP00884	F	Russian	Russia	Europe
+HGDP00885	F	Russian	Russia	Europe
+HGDP00886	M	Russian	Russia	Europe
+HGDP00887	M	Russian	Russia	Europe
+HGDP00888	M	Russian	Russia	Europe
+HGDP00889	F	Russian	Russia	Europe
+HGDP00890	M	Russian	Russia	Europe
+HGDP00891	M	Russian	Russia	Europe
+HGDP00892	M	Russian	Russia	Europe
+HGDP00893	M	Russian	Russia	Europe
+HGDP00894	M	Russian	Russia	Europe
+HGDP00895	M	Russian	Russia	Europe
+HGDP00896	M	Russian	Russia	Europe
+HGDP00897	M	Russian	Russia	Europe
+HGDP00898	F	Russian	Russia	Europe
+HGDP00899	F	Russian	Russia	Europe
+HGDP00900	M	Russian	Russia	Europe
+HGDP00901	F	Russian	Russia	Europe
+HGDP00902	F	Russian	Russia	Europe
+HGDP00903	F	Russian	Russia	Europe
+HGDP01062	F	Sardinian	Italy	Europe
+HGDP01063	M	Sardinian	Italy	Europe
+HGDP01064	F	Sardinian	Italy	Europe
+HGDP01065	F	Sardinian	Italy	Europe
+HGDP01066	M	Sardinian	Italy	Europe
+HGDP01067	M	Sardinian	Italy	Europe
+HGDP01068	F	Sardinian	Italy	Europe
+HGDP01069	M	Sardinian	Italy	Europe
+HGDP01070	F	Sardinian	Italy	Europe
+HGDP01071	M	Sardinian	Italy	Europe
+HGDP01072	F	Sardinian	Italy	Europe
+HGDP01073	M	Sardinian	Italy	Europe
+HGDP01074	F	Sardinian	Italy	Europe
+HGDP01075	M	Sardinian	Italy	Europe
+HGDP01076	M	Sardinian	Italy	Europe
+HGDP01077	M	Sardinian	Italy	Europe
+HGDP01078	F	Sardinian	Italy	Europe
+HGDP01079	M	Sardinian	Italy	Europe
+HGDP01147	M	North_Italian	Italy (Bergamo)	Europe
+HGDP01151	M	North_Italian	Italy (Bergamo)	Europe
+HGDP01152	M	North_Italian	Italy (Bergamo)	Europe
+HGDP01153	M	North_Italian	Italy (Bergamo)	Europe
+HGDP01155	M	North_Italian	Italy (Bergamo)	Europe
+HGDP01156	F	North_Italian	Italy (Bergamo)	Europe
+HGDP01157	F	North_Italian	Italy (Bergamo)	Europe
+HGDP01161	M	Tuscan	Italy	Europe
+HGDP01162	M	Tuscan	Italy	Europe
+HGDP01163	M	Tuscan	Italy	Europe
+HGDP01164	M	Tuscan	Italy	Europe
+HGDP01166	M	Tuscan	Italy	Europe
+HGDP01167	M	Tuscan	Italy	Europe
+HGDP01168	F	Tuscan	Italy	Europe
+HGDP01169	F	Tuscan	Italy	Europe
+HGDP01171	F	North_Italian	Italy (Bergamo)	Europe
+HGDP01172	F	North_Italian	Italy (Bergamo)	Europe
+HGDP01173	M	North_Italian	Italy (Bergamo)	Europe
+HGDP01174	M	North_Italian	Italy (Bergamo)	Europe
+HGDP01177	F	North_Italian	Italy (Bergamo)	Europe
+HGDP01253	M	Mozabite	Algeria (Mzab)	North Africa
+HGDP01254	F	Mozabite	Algeria (Mzab)	North Africa
+HGDP01255	M	Mozabite	Algeria (Mzab)	North Africa
+HGDP01256	M	Mozabite	Algeria (Mzab)	North Africa
+HGDP01257	M	Mozabite	Algeria (Mzab)	North Africa
+HGDP01258	M	Mozabite	Algeria (Mzab)	North Africa
+HGDP01259	M	Mozabite	Algeria (Mzab)	North Africa
+HGDP01260	M	Mozabite	Algeria (Mzab)	North Africa
+HGDP01261	M	Mozabite	Algeria (Mzab)	North Africa
+HGDP01262	M	Mozabite	Algeria (Mzab)	North Africa
+HGDP01263	M	Mozabite	Algeria (Mzab)	North Africa
+HGDP01264	M	Mozabite	Algeria (Mzab)	North Africa
+HGDP01265	M	Mozabite	Algeria (Mzab)	North Africa
+HGDP01266	M	Mozabite	Algeria (Mzab)	North Africa
+HGDP01267	F	Mozabite	Algeria (Mzab)	North Africa
+HGDP01268	M	Mozabite	Algeria (Mzab)	North Africa
+HGDP01269	M	Mozabite	Algeria (Mzab)	North Africa
+HGDP01270	F	Mozabite	Algeria (Mzab)	North Africa
+HGDP01271	M	Mozabite	Algeria (Mzab)	North Africa
+HGDP01272	M	Mozabite	Algeria (Mzab)	North Africa
+HGDP01273	F	Mozabite	Algeria (Mzab)	North Africa
+HGDP01274	F	Mozabite	Algeria (Mzab)	North Africa
+HGDP01275	F	Mozabite	Algeria (Mzab)	North Africa
+HGDP01276	F	Mozabite	Algeria (Mzab)	North Africa
+HGDP01277	F	Mozabite	Algeria (Mzab)	North Africa
+HGDP01278	M	Mozabite	Algeria (Mzab)	North Africa
+HGDP01279	M	Mozabite	Algeria (Mzab)	North Africa
+HGDP01280	F	Mozabite	Algeria (Mzab)	North Africa
+HGDP01282	M	Mozabite	Algeria (Mzab)	North Africa
+HGDP01357	M	French_Basque	France	Europe
+HGDP01358	M	French_Basque	France	Europe
+HGDP01359	M	French_Basque	France	Europe
+HGDP01360	M	French_Basque	France	Europe
+HGDP01361	M	French_Basque	France	Europe
+HGDP01362	M	French_Basque	France	Europe
+HGDP01363	F	French_Basque	France	Europe
+HGDP01364	M	French_Basque	France	Europe
+HGDP01365	F	French_Basque	France	Europe
+HGDP01366	F	French_Basque	France	Europe
+HGDP01367	F	French_Basque	France	Europe
+HGDP01368	F	French_Basque	France	Europe
+HGDP01369	F	French_Basque	France	Europe
+HGDP01370	M	French_Basque	France	Europe
+HGDP01371	M	French_Basque	France	Europe
+HGDP01372	M	French_Basque	France	Europe
+HGDP01373	F	French_Basque	France	Europe
+HGDP01374	M	French_Basque	France	Europe
+HGDP01375	M	French_Basque	France	Europe
+HGDP01376	M	French_Basque	France	Europe
+HGDP01377	M	French_Basque	France	Europe
+HGDP01378	M	French_Basque	France	Europe
+HGDP01379	M	French_Basque	France	Europe
+HGDP01380	F	French_Basque	France	Europe
+HGDP01381	F	Adygei	Russia Caucasus	Europe
+HGDP01382	F	Adygei	Russia Caucasus	Europe
+HGDP01383	M	Adygei	Russia Caucasus	Europe
+HGDP01384	F	Adygei	Russia Caucasus	Europe
+HGDP01385	M	Adygei	Russia Caucasus	Europe
+HGDP01386	F	Adygei	Russia Caucasus	Europe
+HGDP01387	F	Adygei	Russia Caucasus	Europe
+HGDP01388	F	Adygei	Russia Caucasus	Europe
+HGDP01396	M	Adygei	Russia Caucasus	Europe
+HGDP01397	M	Adygei	Russia Caucasus	Europe
+HGDP01398	F	Adygei	Russia Caucasus	Europe
+HGDP01399	F	Adygei	Russia Caucasus	Europe
+HGDP01400	F	Adygei	Russia Caucasus	Europe
+HGDP01401	F	Adygei	Russia Caucasus	Europe
+HGDP01402	M	Adygei	Russia Caucasus	Europe
+HGDP01403	M	Adygei	Russia Caucasus	Europe
+HGDP01404	M	Adygei	Russia Caucasus	Europe

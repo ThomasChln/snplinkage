@@ -1,0 +1,10 @@
+image: docker:stable
+
+services:
+  - docker:dind
+
+run_check:
+  script:
+    - docker build -t snplinkage ./
+    - docker run --rm -w /snplinkage -t snplinkage R -e "devtools::check()"
+    - docker run --rm -w /snplinkage -t snplinkage R -e "install.packages('covr');covr::codecov(token = '$CODECOV_TOKEN')"
