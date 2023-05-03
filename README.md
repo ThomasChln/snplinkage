@@ -1,7 +1,8 @@
 # SNPLinkage
 
 [![CRAN version](https://www.r-pkg.org/badges/version/snplinkage)](https://cran.r-project.org/package=snplinkage)
-[![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/snplinkage)](https://cran.r-project.org/package=snplinkage)
+[![CRAN total downloads](http://cranlogs.r-pkg.org/badges/grand-total/snplinkage)](https://cran.r-project.org/package=snplinkage)
+[![CRAN monthly downloads](https://cranlogs.r-pkg.org/badges/snplinkage)](https://cran.r-project.org/package=snplinkage)
 [![Coverage status](https://codecov.io/github/ThomasChln/snplinkage/branch/main/graph/badge.svg?token=DFWQHUXPNE)](https://codecov.io/github/thomaschln/snplinkage)
 
 This R package provides linkage disequilibrium visualizations by displaying correlation matrices annotated with chromosomic positions and gene names. Two types of displays are provided to focus on small or large regions, and both can be extended to combine associations results or investigate feature selection methods.
@@ -118,10 +119,7 @@ Visualize TagSNP feature selection biplot
   grid::grid.draw(plt)
 ```
 
-See the vignette for results and further details.
-<!--
 See the [vignette](https://cran.r-project.org/web/packages/snplinkage/vignettes/snplinkage.pdf) for results and further details.
--->
 
 ## Further reading
 
