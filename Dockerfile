@@ -1,4 +1,4 @@
-from rocker/verse:4.2.3
+from rocker/verse:4.3.0
 run apt-get update && \
   apt-get install -y --no-install-recommends texlive texlive-latex-recommended texlive-fonts-extra qpdf && \
   R -e "install.packages(c('pkgbuild', 'roxygen2', 'testthat'))"

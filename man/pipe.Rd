@@ -2,7 +2,16 @@
 % Please edit documentation in R/0_imports.R
 \name{\%>\%}
 \alias{\%>\%}
-\title{Magrittr pipe operator}
+\title{Pipe}
+\arguments{
+\item{lhs}{A value or the magrittr placeholder.}
+
+\item{rhs}{A function call using the magrittr semantics.}
+}
+\value{
+Result of rhs applied to lhs, see details in magrittr package.
+}
 \description{
-Magrittr pipe operator
+Pipe an object forward into a function or call expression.
+Magrittr imported function, see details and examples in the magrittr package.
 }

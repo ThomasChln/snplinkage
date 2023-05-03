@@ -2,5 +2,6 @@
 .gitlab-ci.yml
 docker-compose.yml
 Dockerfile
+LICENSE
 Makefile
 README.md

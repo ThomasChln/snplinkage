@@ -12,6 +12,7 @@ Linkage disequilibrium visualizations of up to several hundreds of single nucleo
 Useful links:
 \itemize{
   \item \url{https://gitlab.com/thomaschln/snplinkage}
+  \item Report bugs at \url{https://gitlab.com/thomaschln/snplinkage/-/issues}
 }
 
 }

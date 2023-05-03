@@ -32,7 +32,8 @@ Suggests:
     testthat
 biocViews: GeneticVariability, MicroArray, SNP
 URL: https://gitlab.com/thomaschln/snplinkage
+BugReports: https://gitlab.com/thomaschln/snplinkage/-/issues
 VignetteBuilder: knitr
-License: GPL-3 | file LICENSE
+License: GPL-3
 Encoding: UTF-8
 RoxygenNote: 7.2.3
