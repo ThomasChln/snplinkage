@@ -2,7 +2,7 @@
 
 [![CRAN version](https://www.r-pkg.org/badges/version/snplinkage)](https://cran.r-project.org/package=snplinkage)
 [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/snplinkage)](https://cran.r-project.org/package=snplinkage)
-[![Coverage status](https://codecov.io/gh/thomaschln/snplinkage/branch/master/graph/badge.svg)](https://codecov.io/github/thomaschln/snplinkage)
+[![Coverage status](https://codecov.io/github/ThomasChln/snplinkage/branch/main/graph/badge.svg?token=DFWQHUXPNE)](https://codecov.io/github/thomaschln/snplinkage)
 
 This R package provides linkage disequilibrium visualizations by displaying correlation matrices annotated with chromosomic positions and gene names. Two types of displays are provided to focus on small or large regions, and both can be extended to combine associations results or investigate feature selection methods.
 
@@ -102,7 +102,7 @@ Combine with association studies results
   grid::grid.draw(plt)
 ```
 
-Visualize TagSNP feature selction biplot
+Visualize TagSNP feature selection biplot
 
 * Using a small region
 
@@ -125,7 +125,7 @@ See the [vignette](https://cran.r-project.org/web/packages/snplinkage/vignettes/
 
 ## Further reading
 
-The code in this package was used to perform large-scale visualizations of up to 500 SNPs of three genomic regions (*HLA*, *1p13.2*, *8p23*) in a population of more than 1,000 systemic autoimmune diseases patients and healthy controls, sampled by the European research project PreciseSADs, in my [Ph.D. thesis](https://archive-ouverte.unige.ch/unige:161795).
+The code in this package was used to perform large-scale visualizations of up to 500 SNPs of three genomic regions (*HLA*, *1p13.2*, *8p23*) in a population of 1,200 systemic autoimmune diseases patients and healthy controls, sampled by the European research project PreciseSADs, in my [Ph.D. thesis](https://archive-ouverte.unige.ch/unige:161795).
 
 ## Acknowledgements
 
