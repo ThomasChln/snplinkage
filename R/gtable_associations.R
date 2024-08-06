@@ -89,19 +89,23 @@ gtable_ld_associations <- function(df_assocs, df_ld, pvalue_colname = 'pvalues',
 gtable_ld_associations_combine = function(ggplots, diamonds) {
 
   plots <- lapply(ggplots, ggplotGrob)
-  insert_idx <- 10
+  plot_pos = if (getRversion() >= "4.3.3") {
+    list(height = 12, width = 7)
+  } else {
+    list(height = 10, width = 5)
+  }
 
   position_size <- grid::unit(if (diamonds) 1 else .5, 'null')
-  plots$pval %<>% gtable::gtable_add_rows(position_size, insert_idx)
+  plots$pval %<>% gtable::gtable_add_rows(position_size, plot_pos$height)
 
   plots$pval %<>% gtable::gtable_add_grob(
-    gtable::gtable_filter(plots$pos, 'panel'), insert_idx + 1, 5)
+    gtable::gtable_filter(plots$pos, 'panel'), plot_pos$height + 1, plot_pos$width)
 
   ld_size <- grid::unit(1.8, 'null')
-  plots$pval %<>% gtable::gtable_add_rows(ld_size, insert_idx + 1)
+  plots$pval %<>% gtable::gtable_add_rows(ld_size, plot_pos$height + 1)
 
   gtable::gtable_add_grob(plots$pval,
-    gtable::gtable_filter(plots$ld, 'panel|guide-box'), insert_idx + 2, 5)
+    gtable::gtable_filter(plots$ld, 'panel|guide-box'), plot_pos$height + 2, plot_pos$width)
 }
 
 #' Ggplot associations

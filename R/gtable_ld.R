@@ -145,29 +145,39 @@ gtable_ld <- function(df_ld, df_snp, biplot_subset = NULL,
 # build gtable by combining grobs
 gtable_ld_grobs <- function(plots, labels_colname, title) {
 
+  ## gtable probably had an update
+  # in r 4.3.0 plot_pos is 7, 5 out of 12
+  # after, 9, 7, out of 16
+  plot_pos = if (getRversion() >= "4.3.3") {
+    list(height = 9, width = 7, bottom = 17)
+  } else {
+    list(height = 7, width = 5, bottom = 13)
+  }
+
   plots <- lapply(plots, ggplotGrob)
   is_biplot <- 'biplot' %in% names(plots)
   ld_relative_size <- if (!is.null(labels_colname) || is_biplot) 3 else 7
 
   plots$snp_pos <- gtable::gtable_add_rows(plots$snp_pos,
-    grid::unit(ld_relative_size, 'null'), 7)
+    grid::unit(ld_relative_size, 'null'), plot_pos$height)
   plots$snp_pos <- gtable::gtable_add_grob(plots$snp_pos,
-    gtable::gtable_filter(plots$ld, 'panel|guide-box'), 8, 5)
+    gtable::gtable_filter(plots$ld, 'panel|guide-box'),
+    plot_pos$height + 1, plot_pos$width)
 
   # set ld title to bottom if biplot
   if (title != '') {
-    title_pos <- if (is_biplot) 13 else 2
+    title_pos <- if (is_biplot) plot_pos$bottom else 2
     plots$snp_pos <- gtable::gtable_add_rows(plots$snp_pos,
       grid::unit(0.2, 'null'), title_pos)
     plots$snp_pos <- gtable::gtable_add_grob(plots$snp_pos,
-      gtable::gtable_filter(plots$ld, 'title'), title_pos + 1, 5)
+      gtable::gtable_filter(plots$ld, 'title'), title_pos + 1, plot_pos$width)
   }
 
   if (is_biplot) {
     plots$snp_pos <- gtable::gtable_add_rows(plots$snp_pos,
       grid::unit(3, 'null'), 2)
     plots$snp_pos <- gtable::gtable_add_grob(plots$snp_pos,
-      gtable::gtable_filter(plots$biplot, 'panel|guide-box|title'), 3, 5)
+      gtable::gtable_filter(plots$biplot, 'panel|guide-box|title'), 3, plot_pos$width)
   }
 
   plots$snp_pos

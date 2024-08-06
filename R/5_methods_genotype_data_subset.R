@@ -97,6 +97,13 @@ setMethod("getGenotype",
   })
 
 
+
+#' Fetch allele 1 (GenotypeDataSubset object)
+#'
+#' @param obj GenotypeDataSubset object
+#' @param snps_idx SNPs indexes
+#' @return Allele 1 
+#' @export
 fetch_allele1.GenotypeDataSubset <- function(obj, snps_idx) {
   idx <- if (missing(snps_idx)) obj@snps_idx else obj@snps_idx[snps_idx]
 
@@ -106,6 +113,13 @@ fetch_allele1.GenotypeDataSubset <- function(obj, snps_idx) {
   fetch_allele1(obj, idx)
 }
 
+
+#' Fetch allele 1 (GenotypeDataSubset object)
+#'
+#' @param obj GenotypeDataSubset object
+#' @param snps_idx SNPs indexes
+#' @return Allele 2
+#' @export
 fetch_allele2.GenotypeDataSubset <- function(obj, snps_idx) {
   idx <- if (missing(snps_idx)) obj@snps_idx else obj@snps_idx[snps_idx]
 
