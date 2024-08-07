@@ -1,7 +1,7 @@
 # SNPLinkage
 
 [![CRAN version](https://www.r-pkg.org/badges/version/snplinkage)](https://cran.r-project.org/package=snplinkage)
-[![CRAN total downloads](http://cranlogs.r-pkg.org/badges/grand-total/snplinkage)](https://cran.r-project.org/package=snplinkage)
+[![CRAN total downloads](https://cranlogs.r-pkg.org/badges/grand-total/snplinkage)](https://cran.r-project.org/package=snplinkage)
 [![CRAN monthly downloads](https://cranlogs.r-pkg.org/badges/snplinkage)](https://cran.r-project.org/package=snplinkage)
 [![Coverage status](https://codecov.io/github/ThomasChln/snplinkage/branch/main/graph/badge.svg?token=DFWQHUXPNE)](https://codecov.io/github/thomaschln/snplinkage)
 
