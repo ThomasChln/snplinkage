@@ -8,6 +8,12 @@
 #' @param read_snp_annot  Read the SNPs' annotations
 #' @param read_scan_annot Read the scans' annotations
 #' @return Genotype Data object
+#'
+#' @examples
+#' library(snplinkage)
+#' gds_path <- save_hgdp_as_gds()
+#' gdata <- load_gds_as_genotype_data(gds_path)
+#'
 #' @export
 load_gds_as_genotype_data <- function(gds_file, read_snp_annot = TRUE,
   read_scan_annot = TRUE) {

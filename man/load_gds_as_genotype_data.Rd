@@ -24,3 +24,9 @@ Genotype Data object
 Open a connection to a snpgds file (cf. SNPRelate package) as a Genotype
 Data object.
 }
+\examples{
+library(snplinkage)
+gds_path <- save_hgdp_as_gds()
+gdata <- load_gds_as_genotype_data(gds_path)
+
+}

@@ -61,3 +61,14 @@ The maf and r2 parameters are used similarly and as follows:
    - compare MAF 5%, r2 0.8 with MAF 10%, r2 = 0.6
    gtable_ld(gdata, snps_idx, maf = c(0.05, 0.1), r2 = c(0.8, 0.6))
 }
+\examples{
+library(snplinkage)
+gds_path <- save_hgdp_as_gds()
+gdata <- load_gds_as_genotype_data(gds_path)
+qc <- snprelate_qc(gdata, tagsnp = .99)
+
+snp_idxs_1p13_large <- select_region_idxs(qc$gdata, chromosome = 1,
+  position_min = 114e6, n_snps = 100)
+plt <- gtable_ld_gdata(qc$gdata, snp_idxs_1p13_large)
+
+}

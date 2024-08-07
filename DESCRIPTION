@@ -36,4 +36,4 @@ BugReports: https://gitlab.com/thomaschln/snplinkage/-/issues
 VignetteBuilder: knitr
 License: GPL-3
 Encoding: UTF-8
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
