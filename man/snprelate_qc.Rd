@@ -39,3 +39,10 @@ List of gdata, Genotype data object, and df_qc, QC info data frame
 \description{
 Quality control using SNPRelate functions.
 }
+\examples{
+library(snplinkage)
+gds_path <- save_hgdp_as_gds()
+gdata <- load_gds_as_genotype_data(gds_path)
+qc <- snprelate_qc(gdata, tagsnp = .99)
+
+}

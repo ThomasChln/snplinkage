@@ -24,6 +24,10 @@ check: build-cran
 	cd ..;\
 	R CMD check $(PKGNAME)_$(PKGVERS).tar.gz --as-cran
 
+submit: check
+	cd ..;\
+	mv $(PKGNAME)_$(PKGVERS).tar.gz $(PKGSRC)
+
 roxygenise:
 	R -e "roxygen2::roxygenise()"
 

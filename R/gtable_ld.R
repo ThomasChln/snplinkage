@@ -30,6 +30,17 @@
 #' @param double_title Logical, if false (default) keep only biplot title
 #' @param ...         Passed to gtable_ld
 #' @return gtable of ggplots
+#'
+#' @examples
+#' library(snplinkage)
+#' gds_path <- save_hgdp_as_gds()
+#' gdata <- load_gds_as_genotype_data(gds_path)
+#' qc <- snprelate_qc(gdata, tagsnp = .99)
+#'
+#' snp_idxs_1p13_large <- select_region_idxs(qc$gdata, chromosome = 1,
+#'   position_min = 114e6, n_snps = 100)
+#' plt <- gtable_ld_gdata(qc$gdata, snp_idxs_1p13_large)
+#'
 #' @export
 gtable_ld_gdata <- function(gdata, snps_idx, maf = NULL, r2 = NULL,
   diamonds = length(snps_idx) < 40, window = 15, autotitle = TRUE,
@@ -113,6 +124,18 @@ gtable_ld_gdata <- function(gdata, snps_idx, maf = NULL, r2 = NULL,
 #' @param title_biplot   Optional biplot title
 #' @param ...            Passed to ggplot_ld
 #' @return gtable of ggplots
+#'
+#' @examples
+#' library(snplinkage)
+#' gds_path <- save_hgdp_as_gds()
+#' gdata <- load_gds_as_genotype_data(gds_path)
+#' qc <- snprelate_qc(gdata, tagsnp = .99)
+#' snp_idxs_8p23 <- select_region_idxs(qc$gdata, chromosome = 8,
+#'   position_min = 11e6, position_max = 12e6)
+#'
+#' df_ld <- snprelate_ld(qc$gdata, snps_idx = snp_idxs_8p23, quiet = TRUE)
+#' plt <- gtable_ld(df_ld, df_snp = gdata_snps_annots(qc$gdata))
+#'
 #' @export
 gtable_ld <- function(df_ld, df_snp, biplot_subset = NULL,
   labels_colname = NULL, diamonds = length(unique(df_ld$SNP_A)) < 40,

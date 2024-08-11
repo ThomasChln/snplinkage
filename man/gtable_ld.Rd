@@ -44,3 +44,15 @@ Creates a gtable of linkage disequilibrium and chromosomic positions
 ggplots. A biplot_subset parameter is available to add a second linkage
 disequibrium ggplot to visualize the effect of a SNP selection.
 }
+\examples{
+library(snplinkage)
+gds_path <- save_hgdp_as_gds()
+gdata <- load_gds_as_genotype_data(gds_path)
+qc <- snprelate_qc(gdata, tagsnp = .99)
+snp_idxs_8p23 <- select_region_idxs(qc$gdata, chromosome = 8,
+  position_min = 11e6, position_max = 12e6)
+
+df_ld <- snprelate_ld(qc$gdata, snps_idx = snp_idxs_8p23, quiet = TRUE)
+plt <- gtable_ld(df_ld, df_snp = gdata_snps_annots(qc$gdata))
+
+}

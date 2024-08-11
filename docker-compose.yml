@@ -31,3 +31,9 @@ services:
       - ./:/snplinkage/
     working_dir: /snplinkage/
     command: make
+  pkg_submit:
+    build: ./
+    volumes:
+      - ./:/sgraph/
+    working_dir: /sgraph/
+    command: make submit

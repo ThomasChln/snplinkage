@@ -13,6 +13,13 @@
 #' @param tagsnp      TagSNP r2 correlation threshold, default 0.8
 #' @param n_cores     Number of cores
 #' @return List of gdata, Genotype data object, and df_qc, QC info data frame
+#'
+#' @examples
+#' library(snplinkage)
+#' gds_path <- save_hgdp_as_gds()
+#' gdata <- load_gds_as_genotype_data(gds_path)
+#' qc <- snprelate_qc(gdata, tagsnp = .99)
+#'
 #' @export
 snprelate_qc <- function(gdata, samples_nas = 0.03, ibs = 0.99, keep_ids = NULL,
   snps_nas = 0.01, maf = 0.05, tagsnp = 0.8, n_cores = 1) {

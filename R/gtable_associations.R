@@ -20,6 +20,25 @@
 #'                       Forced to the total number of SNPs if diamonds is FALSE
 #' @param ...            Passed to gtable_ld_associations
 #' @return gtable
+#'
+#' @examples
+#' library(snplinkage)
+#' gds_path <- save_hgdp_as_gds()
+#' gdata <- load_gds_as_genotype_data(gds_path)
+#' qc <- snprelate_qc(gdata, tagsnp = .99)
+#'
+#' snp_idxs_mhc <- select_region_idxs(qc$gdata,
+#'   chromosome = 6, position_min = 29e6, position_max = 33e6)
+#' df_assocs <- chisq_pvalues_gdata(qc$gdata, snp_idxs_mhc)
+#'
+#' df_top_aim <- subset(df_assocs, rank(-pvalues, ties.method = 'first') <= 20)
+#'
+#' #qc$gdata <- gdata_add_gene_annots(qc$gdata, rownames(df_top_aim))
+#' qc$gdata <- gdata_add_gene_annots_aim_example(qc$gdata, rownames(df_top_aim))
+#'
+#' plt <- gtable_ld_associations_gdata(df_top_aim, qc$gdata,
+#'   labels_colname = 'gene')
+#'
 #' @export
 gtable_ld_associations_gdata <- function(df_assocs, gdata,
   pvalue_colname = 'pvalues', labels_colname = 'probe_id',
