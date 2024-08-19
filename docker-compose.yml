@@ -34,6 +34,6 @@ services:
   pkg_submit:
     build: ./
     volumes:
-      - ./:/sgraph/
-    working_dir: /sgraph/
+      - ./:/snplinkage/
+    working_dir: /snplinkage/
     command: make submit

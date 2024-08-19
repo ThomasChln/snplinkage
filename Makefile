@@ -22,7 +22,7 @@ install: build
 
 check: build-cran
 	cd ..;\
-	R CMD check $(PKGNAME)_$(PKGVERS).tar.gz --as-cran
+	R CMD check $(PKGNAME)_$(PKGVERS).tar.gz
 
 submit: check
 	cd ..;\
