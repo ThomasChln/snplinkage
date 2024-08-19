@@ -39,7 +39,8 @@ devtools_check:
 
 vignette:
 	cd vignettes;\
-	R -e "Sweave('snplinkage.Rnw');tools::texi2pdf('snplinkage.tex')"
+	R -e "Sweave('snplinkage.Rnw');tools::texi2pdf('snplinkage.tex')";\
+	R -e "rmarkdown::render('customize.Rmd')"
 
 clean:
 	$(RM) doc.pdf

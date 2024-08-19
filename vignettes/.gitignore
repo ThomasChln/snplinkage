@@ -3,4 +3,5 @@
 # Except these files
 !.gitignore
 !snplinkage.Rnw
+!customize.Rmd
 !biblio.bib

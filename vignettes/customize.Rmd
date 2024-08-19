@@ -1,0 +1,191 @@
+---
+title: "Other Data Formats And Customizations"
+author: "Thomas Charlon"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+bibliography: biblio.bib 
+vignette: >
+  %\VignetteIndexEntry{Other Data Formats And Customizations}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  fig.width = 6,
+  fig.height = 6,
+  fig.align = 'center',
+  dpi = 200,
+  out.width = "100%",
+  out.height = "100%",
+  comment = "#>"
+)
+```
+
+# Other Data Formats And Customizations
+
+SNPLinkage is modular enough to use directly dataframes of correlation matrices and chromosomic positions specified by the user, e.g. for visualizing RNASeq data. The user can compute a correlation matrix or any kind of pair-wise similarity matrix independently and then use SNPLinkage to build and arrange easily customizable ggplot2 objects.
+
+## Building the correlation matrix plot
+
+The user can specify the correlations he wants to visualize as a dataframe to the `ggplot_ld` function. The column names must follow the following pattern: `SNP_A` and `SNP_B` for the two variables in relation, and `R2` for the correlation value.
+
+```{r}
+  library(snplinkage)
+
+  # example rnaseq data frame, 20 variables of 20 patients
+  m_rna = matrix(runif(20 ^ 2), nrow = 20)
+
+  # pair-wise correlation matrix
+  m_ld = cor(m_rna) ^ 2
+
+  # keep only upper triangle and reshape to data frame
+  m_ld[lower.tri(m_ld, diag = TRUE)] = NA
+  df_ld = reshape2::melt(m_ld) |> na.omit()
+
+  # rename for SNPLinkage
+  names(df_ld) = c('SNP_A', 'SNP_B', 'R2')
+
+  # visualize with ggplot_ld
+  gg_ld = ggplot_ld(df_ld)
+  gg_ld
+```
+
+## Adding chromosomic positions
+
+Similarly, the user can specify a dataframe to the `ggplot_snp_pos` function.
+ The dataframe is assumed to be in the same order as the correlation dataframe, and the column name `position` is required.
+
+```{r}
+  # let's imagine the 20 variables came from 3 physically close regions
+  positions = c(runif(7, 10e5, 15e5), runif(6, 25e5, 30e5),
+                runif(7, 45e5, 50e5)) |> sort()
+
+  # build the dataframe
+  df_snp_pos = data.frame(position = positions)
+
+  # minimal call
+  gg_snp_pos = ggplot_snp_pos(df_snp_pos)
+  gg_snp_pos
+```
+
+Optionally, one can specify the `labels_colname` parameter to give the name of a column that will have the labels to display.
+
+```{r}
+  df_snp_pos$label = c(rep('HLA-A', 7), rep('HLA-B', 6), rep('HLA-C', 7))
+  gg_snp_pos = ggplot_snp_pos(df_snp_pos, labels_colname = 'label')
+  gg_snp_pos
+```
+
+## Arranging the plots together
+
+We then arrange the plots with the `gtable_ld_grobs` function. One needs to specify in the `labels_colname` parameter if the chromosomic positions plot was built with labels or not. The `title` parameter is also required.
+
+```{r}
+  l_ggs = list(snp_pos = gg_snp_pos, ld = gg_ld)
+  gt_ld = gtable_ld_grobs(l_ggs, labels_colname = TRUE,
+                          title = 'RNASeq correlations')
+  grid::grid.draw(gt_ld)
+```
+
+## Adding associations values
+
+Finally we add the variables' associations to our outcome of interest. The `ggplot_associations` uses as input a dataframe and accepts a parameter `pvalue_colname` to specify which column holds the association values, by default 'pvalues'. It also requires a `labels_colname` parameter to specify the column holding the labels, and a column named `chromosome`. The `linked_area` parameter will affect how the associations are plotted and it is recommended to be used in combination with the `diamonds` parameter of `ggplot_ld` (i.e. TRUE for small number of variables, approximately less than 40).
+
+Additionally, the `n_labels` parameter controls the number of highest association labels displayed (be default 10, the behavior can be disabled by setting `labels_colname` to NULL), and the `nudge` parameter will affect how the labels are displayed (passed to `geom_label_repel` function of 'ggrepel' package).
+
+```{r}
+  # let's assume HLA-B is more associated with the outcome than the other genes
+  pvalues = c(runif(7, 1e-3, 1e-2), runif(6, 1e-8, 1e-6), runif(7, 1e-3, 1e-2))
+  log10_pvals = -log10(pvalues)
+
+  # we can reuse the df_snp_pos object
+  df_snp_pos$pvalues = log10_pvals
+  
+  # add the chromosome column
+  df_snp_pos$chromosome = 6
+
+  gg_assocs = ggplot_associations(df_snp_pos, labels_colname = 'label',
+                                  linked_area = TRUE, nudge = c(0, 0.5),
+                                  n_labels = 12)
+  gg_assocs
+```
+
+We then arrange the plots with the `gtable_ld_grobs` function as previously. We need to call the `ggplot_snp_pos` function with the `upper_subset` parameter set to TRUE for it to connect to the upper graph.
+
+```{r}
+  gg_pos_biplot = ggplot_snp_pos(df_snp_pos, labels_colname = 'label',
+                                 upper_subset = TRUE)
+  l_ggs = list(pos = gg_pos_biplot, ld = gg_ld, pval = gg_assocs)
+  gt_ld = gtable_ld_associations_combine(l_ggs, diamonds = TRUE)
+  grid::grid.draw(gt_ld)
+```
+
+We can extract a title and remove the horizontal axis text as follows.
+
+```{r}
+  library(ggplot2)
+  gg_assocs <- gg_assocs + theme(axis.text.x = element_blank())
+  title <- gg_assocs$labels$x %>% gsub(' (Mbp)', '', ., fixed = TRUE) %>%
+    paste('-', nrow(df_snp_pos), 'SNPs')
+  gg_assocs <- gg_assocs + labs(title = title, x = NULL)
+  
+  l_ggs$pval = gg_assocs
+  gt_ld = gtable_ld_associations_combine(l_ggs, diamonds = TRUE)
+  grid::grid.draw(gt_ld)
+```
+
+## Example on Crohn dataset from gap package
+
+In this dataset from the 'gap' package [@gap-R], 206 SNPs from chromosome 5 (5q31) were measured from 129 Crohn's disease patients and their 2 parents, totalling 387 samples.
+
+```{r}
+  data('crohn')
+  m_hla = crohn[, -(1:6)]
+  m_ld = cor(m_hla) ^ 2
+
+  # keep only upper triangle and reshape to data frame
+  m_ld[lower.tri(m_ld, diag = TRUE)] = NA
+  df_ld = reshape2::melt(m_ld) |> na.omit()
+
+  # rename for SNPLinkage
+  names(df_ld) = c('SNP_A', 'SNP_B', 'R2')
+
+  # visualize with ggplot_ld
+  gg_ld = ggplot_ld(df_ld)
+  gg_ld
+```
+
+Compute p-values
+
+```{r}
+  mlog10_pvals = chisq_pvalues(m_hla, crohn[, 'crohn'])
+  df_pos = data.frame(probe_id = colnames(m_hla), pvalues = mlog10_pvals,
+                      chromosome = 5)
+
+  # if we don't have positions we can use byindex = TRUE
+  gg_assocs = ggplot_associations(df_pos, byindex = TRUE, nudge = c(0, 0.5))
+  gg_assocs
+```
+
+Arrange with 'cowplot'
+
+```{r}
+  cowplot::plot_grid(gg_assocs, gg_ld, nrow = 2)
+```
+
+Focus on most associated
+
+```{r}
+  df_top_assocs = subset(df_pos, pvalues > quantile(pvalues, 0.9))
+  gg_assocs = ggplot_associations(df_top_assocs, linked_area = TRUE,
+                                  nudge = c(0, 0.5))
+
+  df_ld = subset(df_ld, SNP_A %in% df_top_assocs$probe_id &
+                        SNP_B %in% df_top_assocs$probe_id)
+
+  gg_ld = ggplot_ld(df_ld)
+   
+  cowplot::plot_grid(gg_assocs, gg_ld, nrow = 2)
+```

@@ -8,6 +8,9 @@ run R -e 'BiocManager::install("S4Vectors")'
 run R -e 'BiocManager::install(c("GWASTools", "gdsfmt", "SNPRelate", "biomaRt"))'
 
 run R -e "install.packages(c('cowplot', 'ggplot2', 'ggrepel', 'gtable', 'data.table', 'dplyr', 'knitr', 'plyr'))"
+run R -e "install.packages('reshape2')"
+run R -e "install.packages('rmarkdown')"
+
 add ./DESCRIPTION /snplinkage/DESCRIPTION
 run R -e "devtools::install_deps('snplinkage', dependencies = TRUE)"
 add ./ /snplinkage

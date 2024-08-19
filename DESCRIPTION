@@ -28,6 +28,8 @@ Suggests:
     knitr,
     methods,
     plyr,
+    reshape2,
+    rmarkdown,
     SNPRelate,
     testthat
 biocViews: GeneticVariability, MicroArray, SNP
