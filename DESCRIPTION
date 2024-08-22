@@ -1,6 +1,6 @@
 Package: snplinkage
 Title: Single Nucleotide Polymorphisms Linkage Disequilibrium Visualizations
-Version: 1.1.0
+Version: 1.2.0
 Authors@R: c(
   person("Thomas", "Charlon", role = c("aut", "cre"), email = "charlon@protonmail.com", comment = c(ORCID = "0000-0001-7497-0470")),
   person("Karl", "Forner", role = "aut"),

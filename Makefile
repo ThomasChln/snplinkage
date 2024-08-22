@@ -43,6 +43,6 @@ vignette:
 	R -e "rmarkdown::render('customize.Rmd')"
 
 clean:
-	$(RM) doc.pdf
+	$(RM) doc.pdf *.tar.gz
 	cd vignettes;\
-	$(RM) *.pdf *.aux *.bbl *.blg *.out *.tex *.log
+	$(RM) *.pdf *.aux *.bbl *.blg *.out *.tex *.log *.html

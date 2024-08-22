@@ -180,7 +180,7 @@ gtable_ld_associations_combine = function(ggplots, diamonds) {
   plots$pval %<>% gtable::gtable_add_rows(ld_size, plot_pos$height + 1)
 
   gtable::gtable_add_grob(plots$pval,
-    gtable::gtable_filter(plots$ld, 'panel|guide-box'), plot_pos$height + 2, plot_pos$width)
+    gtable::gtable_filter(plots$ld, 'panel|guide-box-inside'), plot_pos$height + 2, plot_pos$width)
 }
 
 #' Ggplot associations

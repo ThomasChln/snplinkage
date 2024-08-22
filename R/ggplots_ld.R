@@ -43,8 +43,8 @@ ggplot_ld <- function(df_ld, diamonds = length(unique(df_ld$SNP_A)) < 40,
     axis.title = element_blank(), axis.ticks = element_blank())
 }
 
-diamond_grid <- function(seq_snp, r2, window) {
-  grid_snp <- t(utils::combn(seq_snp, 2))
+diamond_grid <- function(df_grid_snp, r2, window) {
+  grid_snp = df_grid_snp
   grid_snp <- grid_snp[apply(grid_snp, 1, diff) <= window, ]
   grid_snp[, 1] <- grid_snp[, 1] - grid_snp[, 2]
   grid_snp[, 2] <- grid_snp[, 2] + .5 * grid_snp[, 1]
@@ -60,7 +60,7 @@ diamond_grid <- function(seq_snp, r2, window) {
   seq_snp <- unique(all_snps)
   n_snp <- max(seq_snp)
   window <- max(apply(df_ld[1:2], 1, diff))
-  df_ld = diamond_grid(seq_snp, df_ld$R2, window)
+  df_ld = diamond_grid(df_ld[1:2], df_ld$R2, window)
 
   # Plot LD values
   inv_r2 <- pmin(1, pmax(0, 1 - df_ld$R2))

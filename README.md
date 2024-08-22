@@ -121,6 +121,10 @@ Visualize TagSNP feature selection biplot
 
 See the [vignette](https://cran.r-project.org/web/packages/snplinkage/vignettes/snplinkage.pdf) for results and further details.
 
+## Other data formats and customizations
+
+To use SNPLinkage with any kind of correlation matrix and customize the plots' appearance, have a look at the [new vignette](https://www.dropbox.com/scl/fi/oniahzv9w7gf8h1sinajg/customize.html?rlkey=4s1km150zfx03nafex18jlx99&st=xpoadszw&dl=0).
+
 ## Further reading
 
 The code in this package was used to perform large-scale visualizations of up to 500 SNPs of three genomic regions (*HLA*, *1p13.2*, *8p23*) in a population of 1,200 systemic autoimmune diseases patients and healthy controls, sampled by the European research project PreciseSADs, in my [Ph.D. thesis](https://archive-ouverte.unige.ch/unige:161795).

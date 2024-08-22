@@ -224,7 +224,7 @@ gtable_ld_grobs <- function(plots, labels_colname, title) {
   plots$snp_pos <- gtable::gtable_add_rows(plots$snp_pos,
     grid::unit(ld_relative_size, 'null'), plot_pos$height)
   plots$snp_pos <- gtable::gtable_add_grob(plots$snp_pos,
-    gtable::gtable_filter(plots$ld, 'panel|guide-box'),
+    gtable::gtable_filter(plots$ld, 'panel|guide-box-inside'),
     plot_pos$height + 1, plot_pos$width)
 
   # set ld title to bottom if biplot
@@ -318,14 +318,12 @@ ggplot_snp_pos <- function(df_snp, upper_subset = NULL, labels_colname = NULL,
   }
 
   # borders and theme
-  xoffset = if (getRversion() >= "4.3.3") 0.465 else 0.5
-
   plot +
     annotate('segment', x = rep(xrange[1], 2), xend = rep(xrange[2], 2),
       y = 0:1, yend = 0:1, lineend = 'square') +
     annotate('segment', x = xrange[1:2], xend = xrange[1:2],
       y = rep(0, 2), yend = rep(1, 2)) +
-    coord_cartesian(xlim = c(xoffset, n_snp + 0.5),
+    coord_cartesian(xlim = c(0.5, n_snp + 0.5),
       ylim = c(yrange[1], yrange[2]),
       expand = FALSE) +
     theme(panel.background = element_blank(), text = element_blank(),

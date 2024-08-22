@@ -13,10 +13,10 @@ vignette: >
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  fig.width = 6,
-  fig.height = 6,
+  fig.width = 10,
+  fig.height = 10,
   fig.align = 'center',
-  dpi = 200,
+  dpi = 150,
   out.width = "100%",
   out.height = "100%",
   comment = "#>"
@@ -34,7 +34,7 @@ The user can specify the correlations he wants to visualize as a dataframe to th
 ```{r}
   library(snplinkage)
 
-  # example rnaseq data frame, 20 variables of 20 patients
+  # example rnaseq data matrix, 20 variables of 20 patients
   m_rna = matrix(runif(20 ^ 2), nrow = 20)
 
   # pair-wise correlation matrix
@@ -59,8 +59,8 @@ Similarly, the user can specify a dataframe to the `ggplot_snp_pos` function.
 
 ```{r}
   # let's imagine the 20 variables came from 3 physically close regions
-  positions = c(runif(7, 10e5, 15e5), runif(6, 25e5, 30e5),
-                runif(7, 45e5, 50e5)) |> sort()
+  positions = c(runif(7, 31e6, 31.5e6), runif(6, 32e6, 32.5e6),
+                runif(7, 33e6, 33.5e6)) |> sort()
 
   # build the dataframe
   df_snp_pos = data.frame(position = positions)
@@ -96,7 +96,7 @@ Finally we add the variables' associations to our outcome of interest. The `ggpl
 Additionally, the `n_labels` parameter controls the number of highest association labels displayed (be default 10, the behavior can be disabled by setting `labels_colname` to NULL), and the `nudge` parameter will affect how the labels are displayed (passed to `geom_label_repel` function of 'ggrepel' package).
 
 ```{r}
-  # let's assume HLA-B is more associated with the outcome than the other genes
+  # let's imagine the middle region, HLA-B, is more associated with the outcome
   pvalues = c(runif(7, 1e-3, 1e-2), runif(6, 1e-8, 1e-6), runif(7, 1e-3, 1e-2))
   log10_pvals = -log10(pvalues)
 
@@ -117,6 +117,11 @@ We then arrange the plots with the `gtable_ld_grobs` function as previously. We 
 ```{r}
   gg_pos_biplot = ggplot_snp_pos(df_snp_pos, labels_colname = 'label',
                                  upper_subset = TRUE)
+
+  # let's also say the middle region HLA-B is particularly correlated
+  df_ld$R2[df_ld$SNP_A %in% 8:13 & df_ld$SNP_B %in% 8:13] = runif(15, 0.7, 0.9)
+  gg_ld = ggplot_ld(df_ld)
+
   l_ggs = list(pos = gg_pos_biplot, ld = gg_ld, pval = gg_assocs)
   gt_ld = gtable_ld_associations_combine(l_ggs, diamonds = TRUE)
   grid::grid.draw(gt_ld)
@@ -132,6 +137,53 @@ We can extract a title and remove the horizontal axis text as follows.
   gg_assocs <- gg_assocs + labs(title = title, x = NULL)
   
   l_ggs$pval = gg_assocs
+  gt_ld = gtable_ld_associations_combine(l_ggs, diamonds = TRUE)
+  grid::grid.draw(gt_ld)
+```
+
+## Customizing the ggplots
+
+Let's say we want to change the color of the associations area. We first need to identify which layer it corresponds to:
+
+```{r}
+  gg_assocs$layers
+```
+
+Then we can change the color with:
+
+```{r}
+  gg_assocs$layers[[1]]$aes_params$fill = "#0147ab"
+```
+
+And rebuild our object.
+
+```{r}
+  l_ggs$pval = gg_assocs
+  gt_ld = gtable_ld_associations_combine(l_ggs, diamonds = TRUE)
+  grid::grid.draw(gt_ld)
+```
+
+To change the lines and labels colors, parameters in the functions are available. You can either specify a single value or a vector of same length as your number of features.
+
+```{r}
+  gg_pos_biplot = ggplot_snp_pos(df_snp_pos, labels_colname = 'label',
+                                 upper_subset = TRUE, colors = '#101d6b')
+
+  gg_assocs = ggplot_associations(df_snp_pos, labels_colname = 'label',
+                                  linked_area = TRUE, nudge = c(0, 0.5),
+                                  n_labels = 12, colors = '#101d6b')
+
+  # extract title
+  gg_assocs <- gg_assocs + theme(axis.text.x = element_blank())
+  title <- gg_assocs$labels$x %>% gsub(' (Mbp)', '', ., fixed = TRUE) %>%
+    paste('-', nrow(df_snp_pos), 'SNPs')
+  gg_assocs <- gg_assocs + labs(title = title, x = NULL)
+
+  # replace area color
+  gg_assocs$layers[[1]]$aes_params$fill = "#0147ab"
+
+  # rebuild
+  l_ggs = list(pos = gg_pos_biplot, ld = gg_ld, pval = gg_assocs)
   gt_ld = gtable_ld_associations_combine(l_ggs, diamonds = TRUE)
   grid::grid.draw(gt_ld)
 ```
@@ -188,4 +240,14 @@ Focus on most associated
   gg_ld = ggplot_ld(df_ld)
    
   cowplot::plot_grid(gg_assocs, gg_ld, nrow = 2)
+```
+
+## References
+
+<div id="refs"></div>
+
+## Session information
+
+```{r}
+  sessionInfo()
 ```
