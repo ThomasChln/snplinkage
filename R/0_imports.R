@@ -1,7 +1,21 @@
 #' @import gdsfmt
 #' @import ggplot2
 #' @import GWASTools
-#' @import magrittr
+#' @importFrom biomaRt getBM useMart
+#' @importFrom cowplot theme_cowplot
+#' @importFrom data.table fread
+#' @importFrom ggrepel geom_label_repel
+#' @importFrom grDevices grey rgb
+#' @importFrom grid grid.draw unit
+#' @importFrom gtable gtable_add_grob gtable_add_rows gtable_filter
+#' @importFrom knitr kable
+#' @importFrom methods as callNextMethod is new
+#' @importFrom parallel mclapply
+#' @importFrom reshape2 melt
+#' @importFrom SNPRelate snpgdsIBS snpgdsLDMat snpgdsLDpruning snpgdsOpen
+#'                       snpgdsSampMissRate snpgdsSelectSNP snpgdsSNPRateFreq
+#' @importFrom stats chisq.test na.omit p.adjust setNames
+#' @importFrom utils globalVariables head tail unzip
 NULL
 
 #' Pipe

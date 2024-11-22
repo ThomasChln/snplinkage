@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
   fig.width = 10,
   fig.height = 10,
   fig.align = 'center',
-  dpi = 150,
+  dpi = 120,
   out.width = "100%",
   out.height = "100%",
   comment = "#>"
@@ -67,7 +67,6 @@ Similarly, the user can specify a dataframe to the `ggplot_snp_pos` function.
 
   # minimal call
   gg_snp_pos = ggplot_snp_pos(df_snp_pos)
-  gg_snp_pos
 ```
 
 Optionally, one can specify the `labels_colname` parameter to give the name of a column that will have the labels to display.
@@ -75,7 +74,6 @@ Optionally, one can specify the `labels_colname` parameter to give the name of a
 ```{r}
   df_snp_pos$label = c(rep('HLA-A', 7), rep('HLA-B', 6), rep('HLA-C', 7))
   gg_snp_pos = ggplot_snp_pos(df_snp_pos, labels_colname = 'label')
-  gg_snp_pos
 ```
 
 ## Arranging the plots together
@@ -109,7 +107,6 @@ Additionally, the `n_labels` parameter controls the number of highest associatio
   gg_assocs = ggplot_associations(df_snp_pos, labels_colname = 'label',
                                   linked_area = TRUE, nudge = c(0, 0.5),
                                   n_labels = 12)
-  gg_assocs
 ```
 
 We then arrange the plots with the `gtable_ld_grobs` function as previously. We need to call the `ggplot_snp_pos` function with the `upper_subset` parameter set to TRUE for it to connect to the upper graph.
@@ -124,7 +121,6 @@ We then arrange the plots with the `gtable_ld_grobs` function as previously. We 
 
   l_ggs = list(pos = gg_pos_biplot, ld = gg_ld, pval = gg_assocs)
   gt_ld = gtable_ld_associations_combine(l_ggs, diamonds = TRUE)
-  grid::grid.draw(gt_ld)
 ```
 
 We can extract a title and remove the horizontal axis text as follows.
@@ -160,7 +156,6 @@ And rebuild our object.
 ```{r}
   l_ggs$pval = gg_assocs
   gt_ld = gtable_ld_associations_combine(l_ggs, diamonds = TRUE)
-  grid::grid.draw(gt_ld)
 ```
 
 To change the lines and labels colors, parameters in the functions are available. You can either specify a single value or a vector of same length as your number of features.
@@ -206,7 +201,6 @@ In this dataset from the 'gap' package [@gap-R], 206 SNPs from chromosome 5 (5q3
 
   # visualize with ggplot_ld
   gg_ld = ggplot_ld(df_ld)
-  gg_ld
 ```
 
 Compute p-values
@@ -218,7 +212,6 @@ Compute p-values
 
   # if we don't have positions we can use byindex = TRUE
   gg_assocs = ggplot_associations(df_pos, byindex = TRUE, nudge = c(0, 0.5))
-  gg_assocs
 ```
 
 Arrange with 'cowplot'
